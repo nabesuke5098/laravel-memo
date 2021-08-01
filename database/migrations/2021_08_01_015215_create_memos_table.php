@@ -14,7 +14,7 @@ class CreateMemosTable extends Migration
     public function up()
     {
         Schema::create('memos', function (Blueprint $table) {
-            $table->unsinedBigInteger('id', true);
+            $table->unsignedBigInteger('id', true);
             $table->longText('content');
             $table->unsingedBigInteger('user_id');
             // 論理削除

@@ -14,9 +14,9 @@ class CreateTagsTable extends Migration
     public function up()
     {
         Schema::create('tags', function (Blueprint $table) {
-            $table->unsinedBigInteger('id', true);
+            $table->unsignedBigInteger('id', true);
             $table->string('name');
-            $table->unsingedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id');
             // 論理削除
             $table->softDeletes();
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
